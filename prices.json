@@ -1,0 +1,40 @@
+{
+  "plans": [
+    {
+      "name": "Normal",
+      "original_price": 5799,
+      "discounted_price": 5000,
+      "billing_cycle": "3 Monthly",
+      "features": [
+        "Unlimited access to the gym",
+        "1 class per week",
+        "FREE drinking package",
+        "1 Free personal training"
+      ]
+    },
+    {
+      "name": "Professional",
+      "original_price": 7837.5,
+      "discounted_price": 7000,
+      "billing_cycle": "6 Monthly",
+      "features": [
+        "Unlimited access to the gym",
+        "2 classes per week",
+        "FREE drinking package",
+        "2 Free personal training"
+      ]
+    },
+    {
+      "name": "Advanced",
+      "original_price": 10999,
+      "discounted_price": 9000,
+      "billing_cycle": "12 Monthly",
+      "features": [
+        "Unlimited access to the gym",
+        "6 classes per week",
+        "FREE drinking package",
+        "5 Free personal training"
+      ]
+    }
+  ]
+}

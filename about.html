@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>About us</title>
+    <link rel="icon" type="image/png" href="img/logo-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Century', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h2, h5 {
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            padding: 10px 0;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #f1d264 !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover, .navbar-nav .nav-link:hover {
+            color: #ddd !important;
+        }
+
+        /* Trainers Section Styling */
+        .trainer-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .trainer-item {
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .trainer-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .ti-pic {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .ti-pic img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .ti-pic:hover img {
+            transform: scale(1.1);
+        }
+
+        .ti-links {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ti-pic:hover .ti-links {
+            opacity: 1;
+        }
+
+        .ti-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .ti-links a:hover {
+            color: #007bff;
+        }
+
+        .trainer-text {
+            padding: 20px;
+            background: #fff;
+        }
+
+        .trainer-text h5 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .trainer-text h5 span {
+            font-size: 1rem;
+            color: #666;
+            display: block;
+            margin-top: 5px;
+        }
+
+        /* About Us section */
+        #about-us {
+            background-color: #1b1b1b;
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        #about-us h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        #about-us p {
+            text-align: center;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ddd;
+        }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            h2 {
+                font-size: 28px;
+            }
+
+            .trainer-item {
+                margin-bottom: 20px;
+            }
+
+            .trainer-text h5 {
+                font-size: 16px;
+            }
+
+            #about-us h2 {
+                font-size: 28px;
+            }
+
+            #about-us p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <img src="img/logo-removebg-preview.png" style="height: 130px; padding: 10px;">
+            <a class="navbar-brand" href="#">
+                <p style="font-size: xx-large;">Royal Fitness Club</p>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule.html">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <h2>About Royal Fitness Club</h2>
+        <p>Welcome to Royal Fitness Club, your ultimate destination for fitness and well-being. Our club is built on the foundation of a community that thrives on energy, positivity, and growth. Whether you are a beginner or an athlete, our professional trainers are here to guide you every step of the way. With personalized fitness programs, a wide range of classes, and state-of-the-art equipment, we are dedicated to helping you achieve your health and fitness goals.</p>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="trainer-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>OUR TRAINERS</h2>
+                        <p>Our Crossfit experts can help you discover new training techniques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="trainer-item">
+                        <div class="ti-pic">
+                            <img src="img/trainer/trainer-1.jpg" alt="">
+                            <div class="ti-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-text">
+                            <h5>Bhavin Sir <span>- Trainer</span></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="trainer-item">
+                        <div class="ti-pic">
+                            <img src="img/trainer/trainer-2.jpg" alt="">
+                            <div class="ti-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-text">
+                            <h5>Mayur Sir <span>- Trainer</span></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="trainer-item">
+                        <div class="ti-pic">
+                            <img src="img/trainer/trainer-3.jpg" alt="">
+                            <div class="ti-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-text">
+                            <h5>Omkar Sir <span>- Trainer</span></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="trainer-item">
+                        <div class="ti-pic">
+                            <img src="img/trainer/trainer-4.jpg" alt="">
+                            <div class="ti-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-text">
+                            <h5>Vishal Shinde <span>- Manager</span></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<footer style="background-color: #000; color: white; padding: 40px 20px;">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-3">
+                <img src="img/logo-removebg-preview.png" alt="Logo" style="width: 100%; max-width: 150px;">
+            </div>
+
+            
+            <div class="col-md-3">
+                <h5>CONTACT US</h5>
+                <br>
+                <br>
+
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none;">INSTAGRAM</a></li>
+                    <li><a href="#" style="text-decoration: none; color: white;" class="fa fa-facebook">......-follow us</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">FACEBOOK</a></li>
+                    <li><a href="#" style="text-decoration: none; color: white;"class="fa fa-instagram">......-follow us</a></li>
+                    
+                </ul>
+            </div>
+
+                <br>
+            <div class="col-md-3">
+                <h5>PROGRAMS</h5>
+                <br>
+                <br>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none;">Personal Training</a></li><br>
+                    <li><a href="#" style="color: white; text-decoration: none;">Group Classes</a></li><br>
+                    <li><a href="#" style="color: white; text-decoration: none;">Membership Plans</a></li><br>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-3">
+                <h5>GET INFO</h5>
+                <br>
+                <br>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><i class="fa fa-phone"></i>
+                        <span>Phone:</span><br>
+                        (12) 345 6789</li>
+                        <br>
+                    <li><i class="fa fa-envelope-o"> </i>
+                        <span>Email</span><br>
+                        Colorlib.info@gmail.com</li>
+                        <br>
+                    <li><i class="fa fa-map-marker"></i>
+                        <span>Address</span><br>
+                        3rd Floor, Royal Fitness Club, Vishwa Arcade, near, Navale Brg, Phase 2, Wadgaon Budruk, Narhe, Pune, Maharashtra 411041
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

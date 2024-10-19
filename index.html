@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Royal Fitness Club</title>
+    <link rel="icon" type="image/png" href="img/logo-removebg-preview.png">
+    <link rel="stylesheet" href="../CSS/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body style="background-color: black;">
+
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+    <style>
+        /* Fade-out and fade-in effect */
+        .fade {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+
+            <img src="img/logo-removebg-preview.png" style="height: 130px; padding: 10px;">
+            <a class="navbar-brand" href="#">
+                <p style="font-size:xx-large;">Royal Fitness Club<p>
+            </a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Logo in the top-left corner -->
+
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/hero-slider/hero-1.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block carousel-caption-transition">
+                    <h5 style="font-size: 2rem;">Experience the Ultimate Fitness Journey at Our Club</h5>
+                    <p>JOIN US NOW</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/hero-slider/hero-2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block carousel-caption-transition">
+                    <h5 style="font-size: 2rem;">Achieve Your Fitness Goals with Cutting-Edge Facilities and Support
+                    </h5>
+                    <p>JOIN US NOW</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/hero-slider/hero-3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block carousel-caption-transition">
+                    <h5 style="font-size: 2rem;">Unleash Your Full Potential with Our Expert Training</h5>
+                    <p>JOIN US NOW</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- Centered Text -->
+        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            id="carouselTextContainer"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+            <a id="clubText" class="navbar-brand fade-in" href="#"
+                style="font-size: 7rem; color: white; font-weight: bold;  font-family: 'Playfair Display', serif">Royal
+                Fitness Club</a> <!-- Centered text -->
+        </div>
+    </div>
+
+
+    <script>
+        // Get the carousel and the clubText elements
+        const carousel = document.getElementById('carouselExampleCaptions');
+        const clubText = document.getElementById('clubText');
+
+        // Listen for the slide event when right arrow is clicked (or any slide occurs)
+        carousel.addEventListener('slide.bs.carousel', function () {
+            // Add the fade-out effect when the slide starts
+            clubText.classList.remove('fade-in');
+            clubText.classList.add('fade-out');
+        });
+
+        // Listen for the event after the slide transition completes
+        carousel.addEventListener('slid.bs.carousel', function () {
+            // Add fade-in effect after slide transition ends
+            clubText.classList.remove('fade-out');
+            clubText.classList.add('fade-in');
+        });
+    </script>
+
+
+
+    <!-- Feature Section  -->
+    <section class="feature-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item feature-item-1"
+                        style="background-image: url('img/feature/feature-1.jpg');">
+                        <h3>WORKOUT ACCESS</h3>
+                        <p>Elevate your fitness journey anytime and Experience the freedom to work out on your schedule
+                        </p>
+                        <a href="#about-us" class="primary-btn f-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item feature-item-2"
+                        style="background-image: url('img/feature/feature-2.jpg');">
+                        <h3>PERSONAL TRAINING</h3>
+                        <p>Join a community of fitness enthusiasts and receive personalized support to achieve your
+                            fitness goals.</p>
+
+                        <a href="#about-us" class="primary-btn f-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item feature-item-3"
+                        style="background-image: url('img/feature/diet_nutri.jpg');">
+                        <h3>DIET AND NUTRITION</h3>
+                        <p>Receive customized nutrition advice from our certified experts to complement your workout
+                            routine and lifestyle.</p>
+
+                        <a href="#about-us" class="primary-btn f-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const featureItems = document.querySelectorAll('.feature-item');
+
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show'); // Add 'show' class to trigger the animation
+                        observer.unobserve(entry.target); // Unobserve once the item has been revealed
+                    }
+                });
+            }, observerOptions);
+
+            featureItems.forEach(item => {
+                observer.observe(item); // Start observing each feature item
+            });
+        });
+    </script>
+    <section class="about-section" id="about-us" style="background-image: url('img/aboutbg.jpg');">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 40px; color: #e9d14d;" class="about-title"><b>ABOUT ROYAL FITNESS
+                    CLUB</b></h2>
+            <p class="short-details" style="text-align: center; color: #e9d14d;">At Royal Fitness Club, we provide a
+                comprehensive fitness experience. Our offerings include:</p>
+            <h2 style="color: #c9b543;">Our Offerings</h2>
+
+            <!-- First Row -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #000;">
+                            <h5 class="card-title">Flexible Time</h5>
+                            <p class="card-text" style="text-align: center;">Workout anytime to suit your lifestyle and
+                                time preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #000;">
+                            <h5 class="card-title">Double Machine Set-Up</h5>
+                            <p class="card-text" style="text-align: center;">Access to multiple machine setups for a
+                                seamless workout experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #000;">
+                            <h5 class="card-title">AC (Peak HR)</h5>
+                            <p class="card-text" style="text-align: center;">Air-conditioned environment for a
+                                comfortable workout.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #000;">
+                            <h5 class="card-title">Certified Trainer Staff</h5>
+                            <p class="card-text" style="text-align: center;">Experienced trainers to guide you in
+                                achieving your fitness goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #000;">
+                            <h5 class="card-title">StarTrck Machine SET-UP</h5>
+                            <p class="card-text" style="text-align: center;">Advanced machines to track your progress
+                                accurately.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #000;">
+                            <h5 class="card-title">Steam Room</h5>
+                            <p class="card-text" style="text-align: center;">Relax and rejuvenate in our steam room
+                                facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Row - Full Width Block -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body" style="background-color: #000;">
+                            <h5 class="card-title">Group Activities</h5>
+                            <p class="card-text" style="text-align: center;">Spinning, Bollywood Dance, Yoga, and more,
+                                all with certified trainers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="long-details mt-4">Join us to enjoy these activities and more, and take your fitness journey to
+                the next level!</p>
+            <a href="#trainers" class="primary-btn about-btn">Learn More</a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card'); // Select all cards
+
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-animation');
+                        observer.unobserve(entry.target); // Unobserve once animation is triggered
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+    <style>
+        .show-animation {
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+
+    <!-- trainers part -->
+    <!-- trainers part -->
+ <!-- Section Title (Static) -->
+ <section class="trainer-section" id="trainer-section">
+    <div class="section-title">
+        <h2>Meet Our Team</h2>
+    </div>
+
+    <!-- Level 1: Manager -->
+    <div class="trainer-content parallax-item" id="level-1">
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-1.jpg" alt="Vishal Dhainse">
+            </div>
+            <div class="trainer-details">
+                <h3>Vishal Dhainse</h3>
+                <p>Manager</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Level 2: Sales Executives -->
+    <div class="trainer-content parallax-item" id="level-2">
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-2.jpg" alt="Shubham Petare">
+            </div>
+            <div class="trainer-details">
+                <h3>Shubham Petare</h3>
+                <p>Sales Executive</p>
+            </div>
+        </div>
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-3.jpg" alt="Vaishnavi Gorhe">
+            </div>
+            <div class="trainer-details">
+                <h3>Vaishnavi Gorhe</h3>
+                <p>Sales Executive</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Level 3: Trainers (2) -->
+    <div class="trainer-content parallax-item" id="level-3">
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-4.jpg" alt="Bhavin Doshi">
+            </div>
+            <div class="trainer-details">
+                <h3>Bhavin Doshi</h3>
+                <p>Trainer</p>
+            </div>
+        </div>
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-5.jpg" alt="Mayur Kanaskar">
+            </div>
+            <div class="trainer-details">
+                <h3>Mayur Kanaskar</h3>
+                <p>Trainer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Level 4: Trainers (4) -->
+    <div class="trainer-content parallax-item" id="level-4">
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-6.jpg" alt="Yogesh">
+            </div>
+            <div class="trainer-details">
+                <h3>Yogesh</h3>
+                <p>Trainer</p>
+            </div>
+        </div>
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-7.jpg" alt="Omkar">
+            </div>
+            <div class="trainer-details">
+                <h3>Omkar</h3>
+                <p>Trainer</p>
+            </div>
+        </div>
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-8.jpg" alt="Yogesh Kamble">
+            </div>
+            <div class="trainer-details">
+                <h3>Yogesh Kamble</h3>
+                <p>Trainer</p>
+            </div>
+        </div>
+        <div class="trainer-card">
+            <div class="trainer-image">
+                <img src="img/trainer/trainer-9.jpg" alt="Sahil">
+            </div>
+            <div class="trainer-details">
+                <h3>Sahil</h3>
+                <p>Trainer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- timetable -->
+
+<!-- timetable -->
+
+<section class="classtime-section class-time-table spad" id="schedule">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <h2 style="color: aliceblue;">Class TimeTable</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="timetable-controls">
+                    <ul>
+                        <li class="active" data-tsfilter="all"><b>All Classes</b></li>
+                        <li data-tsfilter="bollywood"><b>Bollywood Dance</b></li>
+                        <li data-tsfilter="spinning"><b>Spinning</b></li>
+                        <li data-tsfilter="abs"><b>Abs Workout</b></li>
+                        <li data-tsfilter="steam"><b>Steam </b></li>
+                        <li data-tsfilter="yoga"><b>Yoga</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="classtime-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="workout-time" style="padding:0 24.5px">7.00 AM</td>
+                            <td class="hover-bg ts-item" data-tsmeta="spinning">
+                                <span>7.00 - 8.00</span>
+                                <h6>Spinning</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="abs">
+                                <span>7.00 - 8.00</span>
+                                <h6>Abs Workout</h6>
+                            </td>
+                            <td >
+                                
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="bollywood">
+                                <span>7.00 - 8.00</span>
+                                <h6>Bollywood Dance</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="yoga">
+                                <span>7.00 - 8.00</span>
+                                <h6>Yoga</h6>
+                            </td>
+                            <td >
+                                <span></span>
+                                <h6></h6>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">9.00 <br>to<br> 6.00</td>
+                            <td></td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="steam"><h6>Steam All Day</h6></td>
+                            <td></td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="steam"><h6>Steam All Day</h6></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time" style="padding:0 24.5px">7.00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="spinning">
+                                <span>7.00 - 8.00</span>
+                                <h6>Spinning</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="bollywood">
+                                <span>7.00 - 8.00</span>
+                                <h6>Bollywood Dance</h6>
+                            </td>
+                            <td></td>
+                            <td><h6></h6></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">10.00 PM</td>
+                            <td style="color: #4e4e4e; font-size: larger;"><b>"</b></td>
+                            <td style="color: #4e4e4e; font-size: larger;"><b>"</b></td>
+                            <td style="color: #4e4e4e; font-size: larger;"><b>Closing Time</b></td>
+                            <td style="color: #4e4e4e; font-size: larger;"><b>Closing Time</b></td>
+                            <td style="color: #4e4e4e; font-size: larger;"><b>"</b></td>
+                            <td style="color: #4e4e4e; font-size: larger;"><b>"</b><h6></h6></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filters = document.querySelectorAll('.timetable-controls ul li');
+        const items = document.querySelectorAll('.ts-item');
+
+        filters.forEach(filter => {
+            filter.addEventListener('click', function () {
+                // Remove active class from all filters
+                filters.forEach(f => f.classList.remove('active'));
+                // Add active class to the clicked filter
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-tsfilter');
+
+                // Show/hide timetable items based on filter
+                items.forEach(item => {
+                    const itemMeta = item.getAttribute('data-tsmeta');
+
+                    // Show all classes if "all" is clicked, otherwise filter by data attribute
+                    if (filterValue === 'all' || itemMeta === filterValue) {
+                        item.style.visibility = 'visible'; // Show matching items
+                        item.style.opacity = 1; // Make sure it's fully visible
+                    } else {
+                        item.style.visibility = 'hidden'; // Hide non-matching items
+                        item.style.opacity = 0; // Make it invisible but keep space
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
+    <!-- Fees section -->
+    <div class="hero">
+        <video autoplay muted loop class="background-video">
+            <source src="video/fees_section.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <div class="header-content" style="padding-top: 50px;">
+                <h1 style="color: white; font-size: 2rem; text-align:center; font-size: 40px;">
+                    CHOOSE YOUR PRICING PLAN
+                </h1>
+                <br>
+                
+                <p class="description" style="color:white; font-size: large;">
+                    Explore our membership options and select the plan that best matches your fitness ambitions. Enjoy
+                    full access to our facilities and personalized training options.<br><p style="color:#dfd3d3; font-size:x-large; text-align:center" >(prices negotiable)</p>
+                </p>
+            </div>
+            <br><br>
+            <div class="row" id="pricing-plans"></div>
+        </div>
+    </div>
+
+    <script>
+        fetch('/prices.json')
+            .then(response => response.json())
+            .then(data => {
+                const pricingContainer = document.getElementById('pricing-plans');
+                pricingContainer.innerHTML = '';  // Clear any existing content
+    
+                data.plans.forEach(plan => {
+                    // Safeguard: Check if 'features' is defined and is an array
+                    const featuresList = Array.isArray(plan.features) ? plan.features.map(feature => `<li>${feature}</li>`).join('') : '';
+    
+                    const planCard = document.createElement('div');
+                    planCard.classList.add('col-lg-4');
+                    planCard.innerHTML = `
+                        <div class="single-price-plan">
+                            <h4 style="color: black; font-weight: bold;">${plan.name}</h4>
+                            <div class="price-plan">
+                                <h2 style="font-size: large; font-weight: bolder;">
+                                    <span style="text-decoration: line-through;">${plan.original_price.toFixed(2)} INR</span><br>
+                                    ${plan.discounted_price.toFixed(2)} <span>INR</span>
+                                </h2>
+                                <p>${plan.billing_cycle}</p>
+                            </div>
+                            <ul>
+                                ${featuresList}
+                            </ul>
+                            <a href="#" class="primary-btn price-btn">Get Started</a>
+                        </div>
+                    `;
+                    pricingContainer.appendChild(planCard);
+                });
+            })
+            .catch(error => console.error('Error fetching the JSON:', error));
+    </script>
+    
+
+    <!-- info Section  -->
+    <section class="chooseus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2 style="color: white; font-size: 40px;">WHY PEOPLE CHOOSE US</h2>
+                        <p style="color: white;">We offer a unique combination of personalized training, cutting-edge
+                            facilities, and a supportive environment that helps you achieve your fitness goals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="choose-item">
+                        <img src="img/g.icons/Support.png" alt="support">
+                        <h5>Support</h5>
+                        <p>Enjoy peace of mind with our continuous support, available whenever
+                            you need it. We're committed to providing timely solutions and expert guidance at all times.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="choose-item">
+                        <img src="img/g.icons/Group.png" alt="">
+                        <h5>Certified trainer</h5>
+                        <p> Our expert trainers bring a wealth of knowledge and passion to every session. They are
+                            dedicated to crafting personalized workout plans that drive results and keep you motivated.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="choose-item">
+                        <img src="img/g.icons/Health.png" alt="">
+                        <h5>Personalized sessions</h5>
+                        <p>Experience tailored workout plans designed specifically for your fitness level and goals. Our
+                            sessions are customized to ensure you get the most out of every workout.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="choose-item">
+                        <img src="img/g.icons/Dumbell.png" alt="">
+                        <h5>Our equipment</h5>
+                        <p>Benefit from state-of-the-art fitness technology and top-of-the-line equipment that ensures a
+                            premium workout experience. We provide everything you need to reach your fitness goals
+                            effectively and efficiently.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="choose-item">
+                        <img src="img/g.icons/Cleanliness.png" alt="">
+                        <h5>Cleanliness and Hygiene</h5>
+                        <p>We prioritize maintaining a clean and hygienic environment for your health and safety. Our
+                            gym is regularly sanitized, and equipment is thoroughly cleaned to ensure
+                            you have a worry-free workout experience every time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="choose-item">
+                        <img src="img/g.icons/Personalized.png" alt="">
+                        <h5>Focus on your health</h5>
+                        <p>Our top priority is your well-being. We provide a supportive environment and expert guidance
+                            to help you achieve and maintain your health goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+
+    <!-- Gallery  -->
+    <div class="container2" id="gallery">
+        <div class="left-text">
+            <h2 class="heading">OUR GALLERY</h2>
+            <p class="gallery-description" style="text-align:center">Discover the different areas of our gym, where
+                you'll find everything you
+                need to achieve your fitness goals.</p>
+        </div>
+        <div class="gallery">
+            <div class="box row-2" style="background-image: url(img/gal/tredmil.JPG);">Tredmil</div>
+            <div class="box" style="background-image: url(img/gal/entrance.jpg);">Entrance</div>
+            <div class="box" style="background-image: url(img/gal/spinning.jpg);">Spinning</div>
+            <div class="box" style="background-image: url(img/gal/bollywood.jpg);">Bollywood Dance</div>
+            <div class="box" style="background-image: url(img/gal/cardiosection.jpg);">Cardio Section</div>
+            <div class="box row-2" style="background-image: url(img/gal/weights.jpg);">Weights</div>
+            <div class="box" style="background-image: url(img/gal/crosstrainer.jpg);">Cross Trainer</div>
+            <div class="box row-2" style="background-image: url(img/gal/dumblesection.jpg);">Dumble Section</div>
+            <div class="box" style="background-image: url(img/gal/locker.jpg);">Locker</div>
+        </div>
+    </div>
+
+
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            // Elements to animate
+            const leftText = document.querySelector('.left-text');
+            const heading = document.querySelector('.heading');
+
+            // Intersection Observer options
+            const options = {
+                root: null, // Use the viewport as the root
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            // Create an observer
+            const observer = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show'); // Add 'show' class when in view
+                    }
+                });
+            }, options);
+
+            // Observe the elements
+            observer.observe(leftText);
+            observer.observe(heading);
+        });
+    </script>
+
+    <!-- map -->
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.534243867771!2d73.8206747743205!3d18.4594445826223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc29540c6de23e3%3A0xf0906619e2bd6cef!2sRoyal%20Fitness%20Club!5e0!3m2!1sen!2sin!4v1722234218594!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+        <div class="map-contact-details">
+            <div class="open-time">
+                <h5>Timings:</h5>
+                <ul>
+                    <li>Weekday: <span>6.00 AM-10:00 PM</span></li>
+                    <li>Sunday: <span>7.00 AM-12.00 PM</span></li>
+                    <li><p>Closed on Last Sunday</p></li>
+                </ul>
+            </div>
+            <div class="map-contact-form">
+                <h5>Contact Us</h5>
+                <form id="contactForm" onsubmit="event.preventDefault(); sendWhatsAppMessage();">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="phone" class="phone" placeholder="Phone" required>
+                    <textarea id="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="site-btn">Submit Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function sendWhatsAppMessage() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+    
+            // Format the message for WhatsApp
+            const formattedMessage = `Name: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+            const whatsappNumber = '+919405843777'; // Your WhatsApp number
+            const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;
+    
+            // Redirect to WhatsApp
+            window.open(whatsappLink, '_blank');
+            
+            // Clear the form fields after submission
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+    
+    
+
+    <footer style="background-color: #000; color: white; padding: 40px 20px;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3" style="margin-right: 80px;">
+                    <img src="img/logo-removebg-preview.png" alt="Logo" style="width: 100%; max-width: 250px; padding: 0 30px 20px 0;">
+                    <p style="text-align: justify;padding-left:10px">
+                        Empowering Fitness, Strength, and Wellbeing. Join us for personalized workouts, expert guidance, and a community dedicated to your success. Let's build a healthier you!
+                    </p>
+                </div>
+                
+
+                <div class="col-md-3" style="margin-right:80px;">
+                    <h5>CONTACT US</h5>
+                    <br><br>
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li>
+                            <a href="https://www.instagram.com/royalfitnessclub2014/" style="color: white; text-decoration: none;" target="_blank">
+                                <img src="img/g.icons/instagram.png" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle;">
+                                <span style="margin-left: 8px;">INSTAGRAM - follow us</span>
+                            </a>
+                        </li>
+                        <br>
+                        <li>
+                            <a href="https://www.facebook.com/royalfitnness/?_rdr" style="color: white; text-decoration: none;" target="_blank">
+                                <img src="img/g.icons/facebook.png" alt="Facebook" style="width: 20px; height: 20px; vertical-align: middle;">
+                                <span style="margin-left: 8px;">FACEBOOK - follow us</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+
+                <br>
+                <div class="col-md-3">
+                    <h5 style="font-size: 18px;">GET INFO</h5>
+                    <br>
+                    <ul style="list-style-type: none; padding: 0; font-size: 14px;">
+                        <li>
+                            <img src="img/g.icons/call.png" alt="" style="width: 18px; height: 18px;">
+                            <span>Phone:</span><br>
+                            +(91) 90094 27070
+                        </li>
+                        <br>
+                        <li>
+                            <img src="img/g.icons/mail.png" alt="" style="width: 18px; height: 18px;">
+                            <span>Email</span><br>
+                            mail.info@gmail.com
+                        </li>
+                        <br>
+                        <li>
+                            <img src="img/g.icons/location.png" alt="" style="width: 18px; height: 18px;">
+                            <span>Address</span><br>
+                            3rd Floor, Royal Fitness Club, Vishwa Arcade, near, Navale Brg, Phase 2, Wadgaon Budruk, Narhe, Pune, Maharashtra 411041
+                        </li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

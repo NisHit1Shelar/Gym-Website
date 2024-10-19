@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Schedule</title>
+    <link rel="icon" type="image/png" href="img/logo-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Century', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h2, h5 {
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 18px;
+        }
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+            padding: 10px 0;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #f1d264 !important;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover, .navbar-nav .nav-link:hover {
+            color: #ddd !important;
+        }
+/* Section Title */
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Timetable Controls */
+.classtime-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    margin-top: 150px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.timetable-controls ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.timetable-controls ul li {
+    margin: 0 15px;
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 30px;
+}
+
+/* Yellow hover for timetable controls */
+.timetable-controls ul li.active, 
+.timetable-controls ul li:hover {
+    background-color: #FFD700; /* Yellow color */
+    color: #fff;
+}
+
+/* Timetable Table */
+.classtime-table table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.classtime-table table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.classtime-table table thead th {
+    padding: 15px;
+    font-weight: 700;
+}
+
+.classtime-table table tbody td {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.workout-time {
+    font-weight: 700;
+    background-color: black;
+    color: white;
+}
+
+.ts-item {
+    position: relative;
+    transition: background-color 0.3s ease, opacity 0.3s ease-in-out;
+}
+
+/* Yellow hover for timetable items */
+.ts-item:hover {
+    background-color: #FFD700; /* Yellow color */
+}
+
+.ts-item span {
+    display: block;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.ts-item h6 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .classtime-table table tbody td, 
+    .classtime-table table thead th {
+        font-size: 12px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <img src="img/logo-removebg-preview.png" style="height: 130px; padding: 10px;">
+            <a class="navbar-brand" href="#">
+                <p style="font-size: xx-large;">Royal Fitness Club</p>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="schedule.html">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Class Time Section Begin -->
+<section class="classtime-section class-time-table spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <h2>Classtime Table</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="timetable-controls">
+                    <ul>
+                        <li class="active" data-tsfilter="all">All Classes</li>
+                        <li data-tsfilter="bollywood">Bollywood Dance</li>
+                        <li data-tsfilter="spinning">Spinning</li>
+                        <li data-tsfilter="abs">Abs Workout</li>
+                        <li data-tsfilter="steam">Steam Full Day</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="classtime-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="workout-time">10.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="bollywood">
+                                <span>10.00 - 12.00</span>
+                                <h6>Bollywood Dance</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="steam">
+                                <span>All Day</span>
+                                <h6>Steam Full Day</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="spinning">
+                                <span>10.00 - 12.00</span>
+                                <h6>Spinning</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="steam">
+                                <span>All Day</span>
+                                <h6>Steam Full Day</h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">14.00</td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="spinning">
+                                <span>14.00 - 16.00</span>
+                                <h6>Spinning</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="abs">
+                                <span>14.00 - 16.00</span>
+                                <h6>Abs Workout</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="bollywood">
+                                <span>14.00 - 16.00</span>
+                                <h6>Bollywood Dance</h6>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">16.00</td>
+                            <td class="hover-bg ts-item" data-tsmeta="abs">
+                                <span>16.00 - 18.00</span>
+                                <h6>Abs Workout</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="bollywood">
+                                <span>16.00 - 18.00</span>
+                                <h6>Bollywood Dance</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="spinning">
+                                <span>16.00 - 18.00</span>
+                                <h6>Spinning</h6>
+                            </td>
+                            <td class="hover-bg ts-item" data-tsmeta="abs">
+                                <span>16.00 - 18.00</span>
+                                <h6>Abs Workout</h6>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="workout-time">18.00</td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="abs">
+                                <span>18.00 - 20.00</span>
+                                <h6>Abs Workout</h6>
+                            </td>
+                            <td></td>
+                            <td class="hover-bg ts-item" data-tsmeta="bollywood">
+                                <span>18.00 - 20.00</span>
+                                <h6>Bollywood Dance</h6>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filters = document.querySelectorAll('.timetable-controls ul li');
+        const items = document.querySelectorAll('.ts-item');
+
+        filters.forEach(filter => {
+            filter.addEventListener('click', function () {
+                // Remove active class from all filters
+                filters.forEach(f => f.classList.remove('active'));
+                // Add active class to the clicked filter
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-tsfilter');
+
+                // Show/hide timetable items based on filter
+                items.forEach(item => {
+                    const itemMeta = item.getAttribute('data-tsmeta');
+                    
+                    // Show all classes if "all" is clicked, otherwise filter by data attribute
+                    if (filterValue === 'all' || itemMeta === filterValue) {
+                        item.style.visibility = 'visible'; // Show matching items
+                        item.style.opacity = 1; // Make sure it's fully visible
+                    } else {
+                        item.style.visibility = 'hidden'; // Hide non-matching items
+                        item.style.opacity = 0; // Make it invisible but keep space
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
+
+       
+<footer style="background-color: #000; color: white; padding: 40px 20px;">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-3">
+                <img src="img/logo-removebg-preview.png" alt="Logo" style="width: 100%; max-width: 150px;">
+            </div>
+
+            
+            <div class="col-md-3">
+                <h5>CONTACT US</h5>
+                <br>
+                <br>
+
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none;">INSTAGRAM</a></li>
+                    <li><a href="#" style="text-decoration: none; color: white;" class="fa fa-facebook">......-follow us</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">FACEBOOK</a></li>
+                    <li><a href="#" style="text-decoration: none; color: white;"class="fa fa-instagram">......-follow us</a></li>
+                    
+                </ul>
+            </div>
+
+                <br>
+            <div class="col-md-3">
+                <h5>PROGRAMS</h5>
+                <br>
+                <br>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none;">Personal Training</a></li><br>
+                    <li><a href="#" style="color: white; text-decoration: none;">Group Classes</a></li><br>
+                    <li><a href="#" style="color: white; text-decoration: none;">Membership Plans</a></li><br>
+                </ul>
+            </div>
+
+            
+            <div class="col-md-3">
+                <h5>GET INFO</h5>
+                <br>
+                <br>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><i class="fa fa-phone"></i>
+                        <span>Phone:</span><br>
+                        (12) 345 6789</li>
+                        <br>
+                    <li><i class="fa fa-envelope-o"> </i>
+                        <span>Email</span><br>
+                        Colorlib.info@gmail.com</li>
+                        <br>
+                    <li><i class="fa fa-map-marker"></i>
+                        <span>Address</span><br>
+                        3rd Floor, Royal Fitness Club, Vishwa Arcade, near, Navale Brg, Phase 2, Wadgaon Budruk, Narhe, Pune, Maharashtra 411041
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
